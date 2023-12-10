@@ -1,0 +1,17 @@
+/*
+ * main.c
+ *
+ *  Created on: Dec 7, 2023
+ *      Author: Bilal Mohamed
+ */
+
+
+#include "../HAL/lcd.h"
+#include "../HAL/keypad.h"
+
+
+
+void main(void)
+{
+
+}

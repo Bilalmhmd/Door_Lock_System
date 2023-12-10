@@ -1,0 +1,447 @@
+10:56:03 **** Incremental Build of configuration Debug for project HMI_ECU ****
+make all 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 HMI_ECU.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:   12694 bytes (38.7% Full)
+(.text + .data + .bootloader)
+
+Data:        248 bytes (12.1% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+11:03:00 **** Incremental Build of configuration Debug for project Control_ECU ****
+make all 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 Control_ECU.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    5246 bytes (16.0% Full)
+(.text + .data + .bootloader)
+
+Data:         21 bytes (1.0% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+11:03:00 **** Incremental Build of configuration Debug for project HMI_ECU ****
+make all 
+Building file: ../APP/main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"APP/main.d" -MT"APP/main.o" -c -o "APP/main.o" "../APP/main.c"
+In file included from ../APP/main.c:16:
+../APP/../MCAL/UART.h:17:1: warning: "F_CPU" redefined
+<command-line>: warning: this is the location of the previous definition
+In file included from ../APP/main.c:19:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+Finished building: ../APP/main.c
+ 
+Building target: HMI_ECU.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,HMI_ECU.map -mmcu=atmega32 -o "HMI_ECU.elf"  ./MCAL/gpio.o ./MCAL/timer1.o ./MCAL/uart.o  ./HAL/keypad.o ./HAL/lcd.o  ./APP/main.o   
+Finished building target: HMI_ECU.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S HMI_ECU.elf  >"HMI_ECU.lss"
+Finished building: HMI_ECU.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex HMI_ECU.elf  "HMI_ECU.hex"
+Finished building: HMI_ECU.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 HMI_ECU.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:   12466 bytes (38.0% Full)
+(.text + .data + .bootloader)
+
+Data:        248 bytes (12.1% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+11:03:02 **** Incremental Build of configuration Debug for project Control_ECU ****
+make all 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 Control_ECU.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    5246 bytes (16.0% Full)
+(.text + .data + .bootloader)
+
+Data:         21 bytes (1.0% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+11:03:02 **** Incremental Build of configuration Debug for project HMI_ECU ****
+make all 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 HMI_ECU.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:   12466 bytes (38.0% Full)
+(.text + .data + .bootloader)
+
+Data:        248 bytes (12.1% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+11:07:21 **** Incremental Build of configuration Debug for project Control_ECU ****
+make all 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 Control_ECU.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    5246 bytes (16.0% Full)
+(.text + .data + .bootloader)
+
+Data:         21 bytes (1.0% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+11:07:21 **** Incremental Build of configuration Debug for project HMI_ECU ****
+make all 
+Building file: ../HAL/lcd.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"HAL/lcd.d" -MT"HAL/lcd.o" -c -o "HAL/lcd.o" "../HAL/lcd.c"
+In file included from ../HAL/lcd.c:15:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+../HAL/lcd.c: In function 'LCD_init':
+../HAL/lcd.c:24: error: 'OUTPUT_PIN' undeclared (first use in this function)
+../HAL/lcd.c:24: error: (Each undeclared identifier is reported only once
+../HAL/lcd.c:24: error: for each function it appears in.)
+../HAL/lcd.c:42: error: 'OUTPUT_PORT' undeclared (first use in this function)
+../HAL/lcd.c: In function 'LCD_integerToString':
+../HAL/lcd.c:226: warning: implicit declaration of function 'itoa'
+make: *** [HAL/lcd.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+11:08:50 **** Incremental Build of configuration Debug for project Control_ECU ****
+make all 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 Control_ECU.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    5246 bytes (16.0% Full)
+(.text + .data + .bootloader)
+
+Data:         21 bytes (1.0% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+11:08:51 **** Incremental Build of configuration Debug for project HMI_ECU ****
+make all 
+Building file: ../HAL/lcd.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"HAL/lcd.d" -MT"HAL/lcd.o" -c -o "HAL/lcd.o" "../HAL/lcd.c"
+In file included from ../HAL/lcd.c:15:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+../HAL/lcd.c: In function 'LCD_integerToString':
+../HAL/lcd.c:226: warning: implicit declaration of function 'itoa'
+Finished building: ../HAL/lcd.c
+ 
+Building file: ../APP/main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"APP/main.d" -MT"APP/main.o" -c -o "APP/main.o" "../APP/main.c"
+In file included from ../APP/main.c:16:
+../APP/../MCAL/UART.h:17:1: warning: "F_CPU" redefined
+<command-line>: warning: this is the location of the previous definition
+In file included from ../APP/main.c:19:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+../APP/main.c: In function 'insertNewPassword':
+../APP/main.c:125: warning: implicit declaration of function 'LCD_intgerToString'
+../APP/main.c: In function 'getUserPass':
+../APP/main.c:265: error: 'LCD_SET_CURSOR_Left_one_char' undeclared (first use in this function)
+../APP/main.c:265: error: (Each undeclared identifier is reported only once
+../APP/main.c:265: error: for each function it appears in.)
+make: *** [APP/main.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+11:09:48 **** Incremental Build of configuration Debug for project Control_ECU ****
+make all 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 Control_ECU.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    5246 bytes (16.0% Full)
+(.text + .data + .bootloader)
+
+Data:         21 bytes (1.0% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+11:09:48 **** Incremental Build of configuration Debug for project HMI_ECU ****
+make all 
+Building file: ../APP/main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"APP/main.d" -MT"APP/main.o" -c -o "APP/main.o" "../APP/main.c"
+In file included from ../APP/main.c:16:
+../APP/../MCAL/UART.h:17:1: warning: "F_CPU" redefined
+<command-line>: warning: this is the location of the previous definition
+In file included from ../APP/main.c:19:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+../APP/main.c: In function 'insertNewPassword':
+../APP/main.c:125: warning: implicit declaration of function 'LCD_intgerToString'
+Finished building: ../APP/main.c
+ 
+Building target: HMI_ECU.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,HMI_ECU.map -mmcu=atmega32 -o "HMI_ECU.elf"  ./MCAL/gpio.o ./MCAL/timer1.o ./MCAL/uart.o  ./HAL/keypad.o ./HAL/lcd.o  ./APP/main.o   
+./APP/main.o: In function `myOwnDelay':
+../APP/main.c:413: undefined reference to `LCD_intgerToString'
+../APP/main.c:413: undefined reference to `LCD_intgerToString'
+../APP/main.c:418: undefined reference to `LCD_intgerToString'
+make: *** [HMI_ECU.elf] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+11:09:52 **** Incremental Build of configuration Debug for project Control_ECU ****
+make all 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 Control_ECU.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    5246 bytes (16.0% Full)
+(.text + .data + .bootloader)
+
+Data:         21 bytes (1.0% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+11:09:52 **** Incremental Build of configuration Debug for project HMI_ECU ****
+make all 
+Building target: HMI_ECU.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,HMI_ECU.map -mmcu=atmega32 -o "HMI_ECU.elf"  ./MCAL/gpio.o ./MCAL/timer1.o ./MCAL/uart.o  ./HAL/keypad.o ./HAL/lcd.o  ./APP/main.o   
+./APP/main.o: In function `myOwnDelay':
+../APP/main.c:413: undefined reference to `LCD_intgerToString'
+../APP/main.c:413: undefined reference to `LCD_intgerToString'
+../APP/main.c:418: undefined reference to `LCD_intgerToString'
+make: *** [HMI_ECU.elf] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+11:12:38 **** Incremental Build of configuration Debug for project Control_ECU ****
+make all 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 Control_ECU.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    5246 bytes (16.0% Full)
+(.text + .data + .bootloader)
+
+Data:         21 bytes (1.0% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+11:12:38 **** Incremental Build of configuration Debug for project HMI_ECU ****
+make all 
+Building file: ../APP/main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"APP/main.d" -MT"APP/main.o" -c -o "APP/main.o" "../APP/main.c"
+In file included from ../APP/main.c:16:
+../APP/../MCAL/UART.h:17:1: warning: "F_CPU" redefined
+<command-line>: warning: this is the location of the previous definition
+In file included from ../APP/main.c:19:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+../APP/main.c: In function 'getUserPass':
+../APP/main.c:263: warning: implicit declaration of function 'LCD_intgerToString'
+Finished building: ../APP/main.c
+ 
+Building target: HMI_ECU.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,HMI_ECU.map -mmcu=atmega32 -o "HMI_ECU.elf"  ./MCAL/gpio.o ./MCAL/timer1.o ./MCAL/uart.o  ./HAL/keypad.o ./HAL/lcd.o  ./APP/main.o   
+./APP/main.o: In function `myOwnDelay':
+../APP/main.c:413: undefined reference to `LCD_intgerToString'
+../APP/main.c:418: undefined reference to `LCD_intgerToString'
+make: *** [HMI_ECU.elf] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+11:13:53 **** Incremental Build of configuration Debug for project Control_ECU ****
+make all 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 Control_ECU.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    5246 bytes (16.0% Full)
+(.text + .data + .bootloader)
+
+Data:         21 bytes (1.0% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+11:13:53 **** Incremental Build of configuration Debug for project HMI_ECU ****
+make all 
+Building file: ../APP/main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"APP/main.d" -MT"APP/main.o" -c -o "APP/main.o" "../APP/main.c"
+In file included from ../APP/main.c:16:
+../APP/../MCAL/UART.h:17:1: warning: "F_CPU" redefined
+<command-line>: warning: this is the location of the previous definition
+In file included from ../APP/main.c:19:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+../APP/main.c: In function 'systemRun':
+../APP/main.c:349: warning: implicit declaration of function 'LCD_intgerToString'
+Finished building: ../APP/main.c
+ 
+Building target: HMI_ECU.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,HMI_ECU.map -mmcu=atmega32 -o "HMI_ECU.elf"  ./MCAL/gpio.o ./MCAL/timer1.o ./MCAL/uart.o  ./HAL/keypad.o ./HAL/lcd.o  ./APP/main.o   
+./APP/main.o: In function `myOwnDelay':
+../APP/main.c:418: undefined reference to `LCD_intgerToString'
+make: *** [HMI_ECU.elf] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+11:14:32 **** Incremental Build of configuration Debug for project Control_ECU ****
+make all 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 Control_ECU.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    5246 bytes (16.0% Full)
+(.text + .data + .bootloader)
+
+Data:         21 bytes (1.0% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+11:14:32 **** Incremental Build of configuration Debug for project HMI_ECU ****
+make all 
+Building target: HMI_ECU.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,HMI_ECU.map -mmcu=atmega32 -o "HMI_ECU.elf"  ./MCAL/gpio.o ./MCAL/timer1.o ./MCAL/uart.o  ./HAL/keypad.o ./HAL/lcd.o  ./APP/main.o   
+./APP/main.o: In function `myOwnDelay':
+../APP/main.c:418: undefined reference to `LCD_intgerToString'
+make: *** [HMI_ECU.elf] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+11:14:36 **** Incremental Build of configuration Debug for project Control_ECU ****
+make all 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 Control_ECU.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    5246 bytes (16.0% Full)
+(.text + .data + .bootloader)
+
+Data:         21 bytes (1.0% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+11:14:36 **** Incremental Build of configuration Debug for project HMI_ECU ****
+make all 
+Building file: ../APP/main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"APP/main.d" -MT"APP/main.o" -c -o "APP/main.o" "../APP/main.c"
+In file included from ../APP/main.c:16:
+../APP/../MCAL/UART.h:17:1: warning: "F_CPU" redefined
+<command-line>: warning: this is the location of the previous definition
+In file included from ../APP/main.c:19:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+Finished building: ../APP/main.c
+ 
+Building target: HMI_ECU.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,HMI_ECU.map -mmcu=atmega32 -o "HMI_ECU.elf"  ./MCAL/gpio.o ./MCAL/timer1.o ./MCAL/uart.o  ./HAL/keypad.o ./HAL/lcd.o  ./APP/main.o   
+Finished building target: HMI_ECU.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S HMI_ECU.elf  >"HMI_ECU.lss"
+Finished building: HMI_ECU.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex HMI_ECU.elf  "HMI_ECU.hex"
+Finished building: HMI_ECU.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 HMI_ECU.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:   12466 bytes (38.0% Full)
+(.text + .data + .bootloader)
+
+Data:        248 bytes (12.1% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+11:14:39 **** Incremental Build of configuration Debug for project Control_ECU ****
+make all 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 Control_ECU.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    5246 bytes (16.0% Full)
+(.text + .data + .bootloader)
+
+Data:         21 bytes (1.0% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+11:14:40 **** Incremental Build of configuration Debug for project HMI_ECU ****
+make all 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 HMI_ECU.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:   12466 bytes (38.0% Full)
+(.text + .data + .bootloader)
+
+Data:        248 bytes (12.1% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 

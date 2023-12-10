@@ -1,0 +1,13 @@
+/*
+ * Buzzer.h
+ *
+ *  Created on: Dec 7, 2023
+ *      Author: BILAL
+ */
+
+#ifndef HAL_BUZZER_H_
+#define HAL_BUZZER_H_
+
+
+
+#endif /* HAL_BUZZER_H_ */

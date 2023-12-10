@@ -1,0 +1,20 @@
+11:14:40 **** Incremental Build of configuration Debug for project HMI_ECU ****
+make all 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 HMI_ECU.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:   12466 bytes (38.0% Full)
+(.text + .data + .bootloader)
+
+Data:        248 bytes (12.1% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+
+11:14:40 Build Finished. 0 errors, 0 warnings. (took 147ms)
+
