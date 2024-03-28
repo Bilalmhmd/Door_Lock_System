@@ -160,7 +160,7 @@ void insertNewPassword(void)
 
 			break;
 	}
-	_delay_ms(300);  /* Press time */
+	_delay_ms(1000);  /* Press time */
 }
 
 /**********************************************************************

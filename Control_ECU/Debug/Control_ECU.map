@@ -131,7 +131,7 @@ LOAD c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a
 .rela.plt
  *(.rela.plt)
 
-.text           0x00000000     0x1470
+.text           0x00000000     0x1458
  *(.vectors)
  .vectors       0x00000000       0x54 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm32.o
                 0x00000000                __vectors
@@ -279,83 +279,83 @@ LOAD c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a
                 0x000009fa       0x1e ./MCAL/twi.o
                 0x000009fa                TWI_getStatus
  .text.UART_init
-                0x00000a18      0x120 ./MCAL/uart.o
+                0x00000a18      0x108 ./MCAL/uart.o
                 0x00000a18                UART_init
  .text.UART_sendByte
-                0x00000b38       0x2e ./MCAL/uart.o
-                0x00000b38                UART_sendByte
+                0x00000b20       0x2e ./MCAL/uart.o
+                0x00000b20                UART_sendByte
  .text.UART_recieveByte
-                0x00000b66       0x1e ./MCAL/uart.o
-                0x00000b66                UART_recieveByte
+                0x00000b4e       0x1e ./MCAL/uart.o
+                0x00000b4e                UART_recieveByte
  .text.UART_sendString
-                0x00000b84       0x52 ./MCAL/uart.o
-                0x00000b84                UART_sendString
+                0x00000b6c       0x52 ./MCAL/uart.o
+                0x00000b6c                UART_sendString
  .text.UART_receiveString
-                0x00000bd6       0x86 ./MCAL/uart.o
-                0x00000bd6                UART_receiveString
+                0x00000bbe       0x86 ./MCAL/uart.o
+                0x00000bbe                UART_receiveString
  .text.BUZZER_init
-                0x00000c5c       0x22 ./HAL/Buzzer.o
-                0x00000c5c                BUZZER_init
+                0x00000c44       0x22 ./HAL/Buzzer.o
+                0x00000c44                BUZZER_init
  .text.BUZZER_on
-                0x00000c7e       0x18 ./HAL/Buzzer.o
-                0x00000c7e                BUZZER_on
+                0x00000c66       0x18 ./HAL/Buzzer.o
+                0x00000c66                BUZZER_on
  .text.BUZZER_off
-                0x00000c96       0x18 ./HAL/Buzzer.o
-                0x00000c96                BUZZER_off
+                0x00000c7e       0x18 ./HAL/Buzzer.o
+                0x00000c7e                BUZZER_off
  .text.DcMotor_Init
-                0x00000cae       0x36 ./HAL/DC_Motor.o
-                0x00000cae                DcMotor_Init
+                0x00000c96       0x36 ./HAL/DC_Motor.o
+                0x00000c96                DcMotor_Init
  .text.DcMotor_Rotate
-                0x00000ce4       0x8a ./HAL/DC_Motor.o
-                0x00000ce4                DcMotor_Rotate
+                0x00000ccc       0x8a ./HAL/DC_Motor.o
+                0x00000ccc                DcMotor_Rotate
  .text.EEPROM_writeByte
-                0x00000d6e       0x82 ./HAL/external_eeprom.o
-                0x00000d6e                EEPROM_writeByte
+                0x00000d56       0x82 ./HAL/external_eeprom.o
+                0x00000d56                EEPROM_writeByte
  .text.EEPROM_readByte
-                0x00000df0       0xc0 ./HAL/external_eeprom.o
-                0x00000df0                EEPROM_readByte
- .text.main     0x00000eb0       0xba ./APP/main.o
-                0x00000eb0                main
+                0x00000dd8       0xc0 ./HAL/external_eeprom.o
+                0x00000dd8                EEPROM_readByte
+ .text.main     0x00000e98       0xba ./APP/main.o
+                0x00000e98                main
  .text.recievePass
-                0x00000f6a       0x54 ./APP/main.o
-                0x00000f6a                recievePass
+                0x00000f52       0x54 ./APP/main.o
+                0x00000f52                recievePass
  .text.checkOnPass
-                0x00000fbe       0xfa ./APP/main.o
-                0x00000fbe                checkOnPass
+                0x00000fa6       0xfa ./APP/main.o
+                0x00000fa6                checkOnPass
  .text.checkOnEEPROMpass
-                0x000010b8       0x9e ./APP/main.o
-                0x000010b8                checkOnEEPROMpass
+                0x000010a0       0x9e ./APP/main.o
+                0x000010a0                checkOnEEPROMpass
  .text.systemRun
-                0x00001156      0x156 ./APP/main.o
-                0x00001156                systemRun
+                0x0000113e      0x156 ./APP/main.o
+                0x0000113e                systemRun
  .text.systemOperation
-                0x000012ac       0x16 ./APP/main.o
-                0x000012ac                systemOperation
+                0x00001294       0x16 ./APP/main.o
+                0x00001294                systemOperation
  .text.writeEEPROM
-                0x000012c2       0x52 ./APP/main.o
-                0x000012c2                writeEEPROM
+                0x000012aa       0x52 ./APP/main.o
+                0x000012aa                writeEEPROM
  .text.openDoor
-                0x00001314       0x46 ./APP/main.o
-                0x00001314                openDoor
+                0x000012fc       0x46 ./APP/main.o
+                0x000012fc                openDoor
  .text.activeBuzzzer
-                0x0000135a       0x1e ./APP/main.o
-                0x0000135a                activeBuzzzer
+                0x00001342       0x1e ./APP/main.o
+                0x00001342                activeBuzzzer
  .text.timerTicks
-                0x00001378       0x18 ./APP/main.o
-                0x00001378                timerTicks
+                0x00001360       0x18 ./APP/main.o
+                0x00001360                timerTicks
  .text.myOwnDelay
-                0x00001390       0x98 ./APP/main.o
-                0x00001390                myOwnDelay
- .text.libgcc   0x00001428       0x44 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_udivmodsi4.o)
-                0x00001428                __udivmodsi4
- .text.libgcc   0x0000146c        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_exit.o)
- .text.libgcc   0x0000146c        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_copy_data.o)
- .text.libgcc   0x0000146c        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_clear_bss.o)
-                0x0000146c                . = ALIGN (0x2)
+                0x00001378       0x98 ./APP/main.o
+                0x00001378                myOwnDelay
+ .text.libgcc   0x00001410       0x44 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_udivmodsi4.o)
+                0x00001410                __udivmodsi4
+ .text.libgcc   0x00001454        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_exit.o)
+ .text.libgcc   0x00001454        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_copy_data.o)
+ .text.libgcc   0x00001454        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_clear_bss.o)
+                0x00001454                . = ALIGN (0x2)
  *(.fini9)
- .fini9         0x0000146c        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_exit.o)
-                0x0000146c                exit
-                0x0000146c                _exit
+ .fini9         0x00001454        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_exit.o)
+                0x00001454                exit
+                0x00001454                _exit
  *(.fini9)
  *(.fini8)
  *(.fini8)
@@ -374,11 +374,11 @@ LOAD c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a
  *(.fini1)
  *(.fini1)
  *(.fini0)
- .fini0         0x0000146c        0x4 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_exit.o)
+ .fini0         0x00001454        0x4 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_exit.o)
  *(.fini0)
-                0x00001470                _etext = .
+                0x00001458                _etext = .
 
-.data           0x00800060        0xe load address 0x00001470
+.data           0x00800060        0xe load address 0x00001458
                 0x00800060                PROVIDE (__data_start, .)
  *(.data)
  .data          0x00800060        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm32.o
@@ -442,8 +442,8 @@ LOAD c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a
  COMMON         0x00800074        0x1 ./APP/main.o
                 0x00800074                SystemOperation
                 0x00800075                PROVIDE (__bss_end, .)
-                0x00001470                __data_load_start = LOADADDR (.data)
-                0x0000147e                __data_load_end = (__data_load_start + SIZEOF (.data))
+                0x00001458                __data_load_start = LOADADDR (.data)
+                0x00001466                __data_load_end = (__data_load_start + SIZEOF (.data))
 
 .noinit         0x00800075        0x0
                 0x00800075                PROVIDE (__noinit_start, .)
@@ -468,7 +468,7 @@ LOAD c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a
 .signature
  *(.signature*)
 
-.stab           0x00000000     0x267c
+.stab           0x00000000     0x2664
  *(.stab)
  .stab          0x00000000      0x3e4 ./MCAL/PWM0.o
  .stab          0x000003e4      0x624 ./MCAL/gpio.o
@@ -477,15 +477,15 @@ LOAD c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a
                                 0x570 (size before relaxing)
  .stab          0x00000d2c      0x354 ./MCAL/twi.o
                                 0x5a0 (size before relaxing)
- .stab          0x00001080      0x414 ./MCAL/uart.o
-                                0x660 (size before relaxing)
- .stab          0x00001494      0x258 ./HAL/Buzzer.o
+ .stab          0x00001080      0x3fc ./MCAL/uart.o
+                                0x648 (size before relaxing)
+ .stab          0x0000147c      0x258 ./HAL/Buzzer.o
                                 0x264 (size before relaxing)
- .stab          0x000016ec      0x210 ./HAL/DC_Motor.o
+ .stab          0x000016d4      0x210 ./HAL/DC_Motor.o
                                 0x2e8 (size before relaxing)
- .stab          0x000018fc      0x330 ./HAL/external_eeprom.o
+ .stab          0x000018e4      0x330 ./HAL/external_eeprom.o
                                 0x3cc (size before relaxing)
- .stab          0x00001c2c      0xa50 ./APP/main.o
+ .stab          0x00001c14      0xa50 ./APP/main.o
                                 0xc00 (size before relaxing)
 
 .stabstr        0x00000000     0x1769

@@ -42,10 +42,6 @@ void UART_init(const UART_ConfigType * Config_Ptr)
 	 * RXB8 & TXB8 not used for 8-bit data mode
 	 ***********************************************************************/
 	UCSRB = (1<<RXEN) | (1<<TXEN);
-	if(Config_Ptr->bit_data == Nine_bits)
-	{
-		SET_BIT(UCSRB,UCSZ2);
-	}
 	/************************** UCSRC Description **************************
 	 * URSEL   = 1 The URSEL must be one when writing the UCSRC
 	 * UMSEL   = 0 Asynchronous Operation
@@ -65,7 +61,6 @@ void UART_init(const UART_ConfigType * Config_Ptr)
 	/* First 8 bits from the BAUD_PRESCALE inside UBRRL and last 4 bits in UBRRH*/
 	UBRRH = ubrr_value>>8;
 	UBRRL = ubrr_value;
-
 
 }
 
